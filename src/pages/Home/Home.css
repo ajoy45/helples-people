@@ -1,0 +1,15 @@
+
+.people-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: -20px;
+    text-align: center;
+
+}
+/* @media only screen and (max-width:540px){
+    .people-container:{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2px; 
+    }
+} */

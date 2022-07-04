@@ -1,0 +1,18 @@
+.event-container{
+    background-color: #f4f7fc;
+    padding: 100px;
+}
+.event-container input{
+border: 2px outset #f4f7fc;
+padding: 5px;
+
+}
+.event-container input:focus{
+    outline: none !important;
+}
+.event-container textarea{
+    border: 2px outset #f4f7fc;
+}
+.event-container textarea:focus{
+    outline: none !important;
+}
