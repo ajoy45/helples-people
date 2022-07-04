@@ -1,0 +1,29 @@
+.account_container{
+    background-color: #f8fafc;
+    padding: 70px;
+}
+.account_form_container{
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid #e3e3e3 ;
+    padding: 20px;
+    background-color: white;
+}
+.account_form_container input{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid gray;
+}
+.account_form_container input:focus{
+    outline: none !important;
+}
+.volunter_form_container textarea{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid gray;
+}
+.volunter_form_container textarea:focus{
+    outline: none !important;
+}

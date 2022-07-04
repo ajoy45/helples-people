@@ -7,6 +7,7 @@ import Event from './pages/Event/Event';
 import Header from './Header/Header';
 import Register from './pages/Register/Register';
 import Volunter from './pages/Volunter/Volunter';
+import Createaccount from './pages/Createaccount/Createaccount'
 function App() {
   return (
     <div >
@@ -17,6 +18,8 @@ function App() {
            <Route path="event" element={<Event></Event>}></Route>
            <Route path="register" element={<Register></Register>}></Route>
            <Route path="volunter" element={<Volunter></Volunter>}></Route>
+           <Route path="account" element={<Createaccount></Createaccount>}></Route>
+           
         </Routes>
     </div>
   );

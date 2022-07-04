@@ -28,7 +28,7 @@ const Register = () => {
             </div>
             <div className={styles.google_container}>
                 <button onClick={handelGoogleSin} className='mb-2 w-75 '><img className='me-4' width={31} height={31.74} src={googleImg} alt='imag'></img>Continue With Google</button>
-                <p>Don't have an account?<Link to='/volunter' className='text-decoration-none'>Create an account</Link></p>
+                <p>Don't have an account?<Link to='/account' className='text-decoration-none'>Create an account</Link></p>
             </div>
 
 
