@@ -20,7 +20,7 @@ const Header = () => {
               <Nav.Link className='pt-3'as={Link} to='/register' ><button className='bg-primary text-white border-0 reg-btn'>
                 Register
               </button></Nav.Link>
-              <Nav.Link className='pt-3' href="#deets"><button className='bg-primary text-white border-0 reg-btn '>
+              <Nav.Link className='pt-3' as={Link} to='/admin'><button className='bg-primary text-white border-0 reg-btn '>
                 Admin
               </button></Nav.Link>
             </Nav>

@@ -9,6 +9,7 @@ import Register from './pages/Register/Register';
 import Volunter from './pages/Volunter/Volunter';
 import Createaccount from './pages/Createaccount/Createaccount'
 import { ToastContainer } from 'react-toastify';
+import Admin from './pages/Admin/Admin';
 function App() {
   return (
     <div >
@@ -20,6 +21,7 @@ function App() {
            <Route path="register" element={<Register></Register>}></Route>
            <Route path="volunter" element={<Volunter></Volunter>}></Route>
            <Route path="account" element={<Createaccount></Createaccount>}></Route>
+           <Route path="admin" element={<Admin></Admin>}></Route>
            
         </Routes>
         <ToastContainer></ToastContainer>
