@@ -41,7 +41,7 @@ const Volunter = () => {
 
         navigate('/donation')
     }
-    const notify = () => toast("Wow so easy!");
+    const notify = () => toast("Wow,Now you are volunteer");
     
     return (
         <div className={styles.volunter_container}>
