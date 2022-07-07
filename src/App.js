@@ -8,6 +8,7 @@ import Header from './Header/Header';
 import Register from './pages/Register/Register';
 import Volunter from './pages/Volunter/Volunter';
 import Createaccount from './pages/Createaccount/Createaccount'
+import { ToastContainer } from 'react-toastify';
 function App() {
   return (
     <div >
@@ -21,6 +22,7 @@ function App() {
            <Route path="account" element={<Createaccount></Createaccount>}></Route>
            
         </Routes>
+        <ToastContainer></ToastContainer>
     </div>
   );
 }
