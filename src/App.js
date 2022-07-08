@@ -10,13 +10,18 @@ import Volunter from './pages/Volunter/Volunter';
 import Createaccount from './pages/Createaccount/Createaccount'
 import { ToastContainer } from 'react-toastify';
 import Admin from './pages/Admin/Admin';
+import Protectedpage from './pages/Protectedpage/Protectedpage';
 function App() {
   return (
     <div >
          <Header></Header>
         <Routes>
            <Route path="/" element={<Home></Home>}></Route>
-           <Route path="donation" element={<Donation></Donation>}></Route>
+           <Route path="donation" element={
+            <Protectedpage>
+              <Donation></Donation>
+            </Protectedpage>
+           }></Route>
            <Route path="event" element={<Event></Event>}></Route>
            <Route path="register" element={<Register></Register>}></Route>
            <Route path="volunter" element={<Volunter></Volunter>}></Route>

@@ -40,7 +40,7 @@ const Event = () => {
     }
     return (
         <div className='event-container' >
-            <h1 className='text-center'>this is eveny page</h1>
+            <h1 className='text-center'>Add the details people in need </h1>
             <div className='w-50 mx-auto'>
                 <form onSubmit={handelSubmit} >
                     <label htmlFor="html">Event Title</label><br />

@@ -4,7 +4,9 @@ import image from '../../images/logos/Group 1329.png';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
+
 const Volunter = () => {
+    
     const navigate=useNavigate();
     const refName=useRef();
     const refEmail=useRef();
@@ -38,8 +40,10 @@ const Volunter = () => {
         })
         .then(res=>res.json())
         .then(result=>console.log(result))
-
-        navigate('/donation')
+        
+           navigate('/donation')
+    
+        
     }
     const notify = () => toast("Wow,Now you are volunteer");
     
