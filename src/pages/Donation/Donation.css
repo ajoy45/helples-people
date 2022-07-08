@@ -1,0 +1,7 @@
+.donation-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px,2fr));
+    grid-gap: 10px;
+    padding: 40px 40px;
+    
+}
