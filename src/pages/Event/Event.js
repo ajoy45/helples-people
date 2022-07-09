@@ -2,41 +2,41 @@ import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Event.css'
 const Event = () => {
-    const navigate=useNavigate()
-    const[title,setTitle]=useState('');
-    const[description,setDescription]=useState('');
-    const[img,setImg]=useState('');
-    const refEmail=useRef('');
-    const refDescription=useRef('');
-    const refImg=useRef('');
+    const navigate = useNavigate()
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [img, setImg] = useState('');
+    const refEmail = useRef('');
+    const refDescription = useRef('');
+    const refImg = useRef('');
 
-    const handelTitle=()=>{
+    const handelTitle = () => {
         setTitle(refEmail.current.value)
     }
-    const handelDescription=()=>{
+    const handelDescription = () => {
         setDescription(refDescription.current.value)
     }
-    const handelImg=()=>{
+    const handelImg = () => {
         setImg(refImg.current.value)
     }
-    const handelSubmit=(event)=>{
-            event.preventDefault();
-            const data={
-                "title":title,
-                "img":img,
-                "descripton":description
-            }
-            const url='http://localhost:5000/donation';
-            fetch(url,{
-                method:"POST",
-                headers:{
-                    'content-type':'application/json'
-                },
-                body:JSON.stringify(data)
-            })
-            .then(res=>res.json())
-            .then(data=>console.log(data))
-            navigate('/')
+    const handelSubmit = (event) => {
+        event.preventDefault();
+        const data = {
+            "title": title,
+            "img": img,
+            "descripton": description
+        }
+        const url = 'https://immense-oasis-61759.herokuapp.com/donation';
+        fetch(url, {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+        navigate('/')
     }
     return (
         <div className='event-container' >

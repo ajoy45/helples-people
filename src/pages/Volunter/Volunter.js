@@ -6,47 +6,47 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
 
 const Volunter = () => {
-    
-    const navigate=useNavigate();
-    const refName=useRef();
-    const refEmail=useRef();
-    const refDescription=useRef();
-    const[name,setName]=useState('');
-    const[email,setEmail]=useState('');
-    const[description,setDescription]=useState('');
-    const handelName=()=>{
+
+    const navigate = useNavigate();
+    const refName = useRef();
+    const refEmail = useRef();
+    const refDescription = useRef();
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [description, setDescription] = useState('');
+    const handelName = () => {
         setName(refName.current.value)
     }
-    const handelEmail=()=>{
+    const handelEmail = () => {
         setEmail(refEmail.current.value)
     }
-    const handelDescription=()=>{
+    const handelDescription = () => {
         setDescription(refDescription.current.value)
     }
-    const handelVolunterSubmit=event=>{
+    const handelVolunterSubmit = event => {
         event.preventDefault()
-        const data={
-            "name" : name,
-            "email":email,
-            "description":description
+        const data = {
+            "name": name,
+            "email": email,
+            "description": description
         }
-        const url='http://localhost:5000/user';
-        fetch(url,{
-            method:"POST",
-            headers:{
-                'content-type':'application/json'
+        const url = 'https://immense-oasis-61759.herokuapp.com/user';
+        fetch(url, {
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(data)
+            body: JSON.stringify(data)
         })
-        .then(res=>res.json())
-        .then(result=>console.log(result))
-        
-           navigate('/donation')
-    
-        
+            .then(res => res.json())
+            .then(result => console.log(result))
+
+        navigate('/donation')
+
+
     }
     const notify = () => toast("Wow,Now you are volunteer");
-    
+
     return (
         <div className={styles.volunter_container}>
             <div className='text-center p-3'>
@@ -56,7 +56,7 @@ const Volunter = () => {
                 <h1>Register as a Volunteer</h1>
                 <form onSubmit={handelVolunterSubmit}>
                     <input ref={refName} onBlur={handelName} className='w-100 mb-4' type="text" name="" placeholder='Full Name' /><br></br>
-                    <input ref={refEmail}  onBlur={handelEmail} className='w-100 mb-4' type="text" name="" placeholder='UserName Or Email' /><br></br>
+                    <input ref={refEmail} onBlur={handelEmail} className='w-100 mb-4' type="text" name="" placeholder='UserName Or Email' /><br></br>
                     <textarea ref={refDescription} onBlur={handelDescription} className='w-100 mb-4' name="" id="" placeholder='Description'></textarea>
                     <input className='w-100 bg-primary border-0 p-2' type="submit" value="Registration" onClick={notify} />
                 </form>

@@ -3,7 +3,7 @@ import './Donation.css'
 const Donation = () => {
     const [donates, setDonate] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/donate')
+        fetch('https://immense-oasis-61759.herokuapp.com/donate')
             .then(res => res.json())
             .then(data => setDonate(data))
     }, [donates])
@@ -14,7 +14,7 @@ const Donation = () => {
                     <>
                         <img width={300} src={donate.img} alt="" />
                         <h1>{donate.donationName}</h1>
-                        
+
                     </>
                     <button>cancle</button>
                 </div>)
