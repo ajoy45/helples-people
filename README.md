@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# live link:https://bejewelled-bonbon-e976b0.netlify.app/
+
+# Technology use
+*React js
+*Bootstrap
+*express js
+*MongoDb
+*Firebase
+*React testify
+*Heroku
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
